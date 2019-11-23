@@ -24,7 +24,7 @@ module.exports = class Angle{
         return new Angle(temp);
         
     }
-    Normalise(){
+    Normalize(){
         var temp = this.degrees;
         while(temp < 0 || temp > 360){
             if(temp > 360){
@@ -46,25 +46,25 @@ module.exports = class Angle{
         return Math.tan(this.radians);
     }
     quadrant(){
-        var Normalised = this.Normalise().degrees;
-        if(Normalised%90 == 0){
+        var Normalized = this.Normalize().degrees;
+        if(Normalized%90 == 0){
             return -1;
         }
-        if(Normalised > 0 && Normalised < 90){
+        if(Normalized > 0 && Normalized < 90){
             return 1;
         }
-        if(Normalised > 90 && Normalised < 180){
+        if(Normalized > 90 && Normalized < 180){
             return 2;
         }
-        if(Normalised > 180 && Normalised < 270){
+        if(Normalized > 180 && Normalized < 270){
             return 3;
         }
-        if(Normalised > 270 && Normalised < 360){
+        if(Normalized > 270 && Normalized < 360){
             return 4;
         }
     }
     cardinalDirection(){
-        switch (this.Normalise().degrees) {
+        switch (this.Normalize().degrees) {
             case 0:
                 return "N";
             case 360:
@@ -80,7 +80,7 @@ module.exports = class Angle{
         }
     }
     IntercardinalDirection(){
-        switch (this.Normalise().degrees) {
+        switch (this.Normalize().degrees) {
             case 0:
                 return "N";
             case 360:
@@ -104,8 +104,8 @@ module.exports = class Angle{
         }
     }
     between(a,b){
-        var normalA = a.Normalise();
-        var normalB = b.Normalise();
+        var normalA = a.Normalize();
+        var normalB = b.Normalize();
         return this.degrees >= Math.min(normalA.degrees,normalB.degrees) && this.degrees <=Math.max(normalA.degrees, normalB.degrees);
     }
 }
