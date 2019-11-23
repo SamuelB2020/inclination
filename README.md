@@ -3,50 +3,49 @@ A library for working with angles.
 
 ## Usage
 ### Basic Usage <br>
-<code>
-const Angle = require('../index'); <br>
-var angleA = new Angle("90d"); <br>
-console.log(angleA.degrees); <br>
-// 90 <br>
-console.log(angleA.radians); <br>
-// 1.5707963267948966 <br>
-</code>
+```javascript
+const Angle = require('../index');
+var angleA = new Angle("90d");
+console.log(angleA.degrees);
+// 90
+console.log(angleA.radians);
+// 1.5707963267948966
+```
 
 ### Defining an Angle
 
 By default an angle is defined in degrees for example the below code defines an angle of 70&deg; <br>
-<code>
-var angleABC = new Angle(70); <br>
-</code>
+```javascript
+var angleABC = new Angle(70);
+```
 <br>
 Angles can be defined though as a string with a letter denoting their units.<br>
 
-Degrees<br>
-<code>
-var angleABC = new Angle("70d"); <br>
-</code>
-
-Radians<br>
-<code>
-var angleABC = new Angle("3r"); <br>
-</code>
+<b>Degrees</b><br>
+```javascript
+var angleABC = new Angle("70d");
+```
+<b>Radians</b><br>
+```javascript
+var angleABC = new Angle("3r");
+```
 
 Note.
 Exact values with radians can be achieved with the following<br>
-<code>
+```javascript
 var exact = Math.PI/2;<br>
-var angleABC = new Angle(exact+"r"); <br>
-</code>
+var angleABC = new Angle(exact+"r");
+```
 
-Turns<br>
-<code>
-var angleABC = new Angle("0.5t"); <br>
-</code>
+<b>Turns</b><br>
+```javascript
+var angleABC = new Angle("0.5t");
+```
 
-Gons/Gradians<br>
-<code>
-var angleABC = new Angle("300g"); <br>
-</code>
+<b>Gons/Gradians</b><br>
+```javascript
+var angleABC = new Angle("300g");
+```
 
 ## Properties
 
