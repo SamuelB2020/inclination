@@ -51,14 +51,32 @@ var angleABC = new Angle("300g");
 
 ### Angle.degrees
 Returns the angle in degrees
-
+```javascript
+var angleBCA = new Angle("30d");
+console.log(angleBCA.degrees);
+// 30
+```
 ### Angle.radians
 Returns the angle in radians
+```javascript
+var angleBCA = new Angle("30d");
+console.log(angleBCA.radians);
+// 0.5235987755982988
+```
 ### Angle.turns
 Returns the angle in turns
+```javascript
+var angleBCA = new Angle("30d");
+console.log(angleBCA.turns);
+// 0.08333333333333333
+```
 ### Angle.gons
 Returns the angle in gons/gradians
-
+```javascript
+var angleBCA = new Angle("30d");
+console.log(angleBCA.gons);
+// 33.33333333333333
+```
 
 
 ## Functions
@@ -66,35 +84,93 @@ Returns the angle in gons/gradians
 ### Angle.principleAngle()
 
 Returns a new angle within the bounds -180&deg; to 180&deg; (-&#960; to &#960;).
-
+```javascript
+var angleBCA = new Angle("200d");
+var angleBCAPrinciple = angleBCA.principleAngle();
+console.log(angleBCAPrinciple.degrees)
+// -160
+``` 
 ### Angle.Normalize()
 
 Returns a new angle within the bounds 0&deg; to 360&deg; (0 to 2&#960;).
+
+```javascript
+var angleBCA = new Angle("400d");
+var angleBCAPrinciple = angleBCA.Normalize();
+console.log(angleBCAPrinciple.degrees)
+// 40
+``` 
 
 ### Angle.sin()
 
 Returns the sine of the angle.
 
+```javascript
+var angleBCA = new Angle("90d");
+console.log(angleBCA.sin())
+// 1
+```
+
+
 ### Angle.cos()
 
 Returns the cosine of the angle.
+
+```javascript
+var angleBCA = new Angle("180d");
+console.log(angleBCA.cos())
+// -1
+```
+
 
 ### Angle.tan()
 
 Returns the tangent of the angle.
 
+```javascript
+var angleBCA = new Angle("0d");
+console.log(angleBCA.tan())
+// 0
+```
+
 ### Angle.quadrant()
 
 Returns the quadrant number of the angle. If the angle is a boundary angle e.g. 90&deg;, -1 will be returned.
+
+```javascript
+var angleBCA = new Angle("45d");
+console.log(angleBCA.quadrant())
+// 1
+```
 
 ### Angle.cardinalDirection()
 
 Returns the cardinal direction (N, S, E, W) of an angle. If the angle is not a cardinal direction -1 will be returned. 
 
+```javascript
+var angleBCA = new Angle("0d");
+console.log(angleBCA.cardinalDirection())
+// N
+```
+
 ### Angle.IntercardinalDirection()
 
 Returns the Intercardinal direction (N, S, E, W, NE, NW, SE, SW) of an angle. If the angle is not a intercardinal direction -1 will be returned. 
 
+```javascript
+var angleBCA = new Angle("45d");
+console.log(angleBCA.IntercardinalDirection())
+// NE
+```
+
 ### Angle.Between(a,b)
 
 Returns a boolean if the angle lies between two other angles a and b. Note if the angles are equal it will return true.
+
+```javascript
+var angleBCA = new Angle("45d");
+var angleABC = new Angle("0d");
+var angleDCA = new Angle("90d")
+console.log(angleBCA.between(angleABC,angleDCA))
+// true
+```
