@@ -50,16 +50,16 @@ module.exports = class Angle{
         if(Normalized%90 == 0){
             return -1;
         }
-        if(Normalized > 0 && Normalized < 90){
+        else if(Normalized > 0 && Normalized < 90){
             return 1;
         }
-        if(Normalized > 90 && Normalized < 180){
+        else if(Normalized > 90 && Normalized < 180){
             return 2;
         }
-        if(Normalized > 180 && Normalized < 270){
+        else if(Normalized > 180 && Normalized < 270){
             return 3;
         }
-        if(Normalized > 270 && Normalized < 360){
+        else if(Normalized > 270 && Normalized < 360){
             return 4;
         }
     }

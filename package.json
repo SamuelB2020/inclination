@@ -1,0 +1,35 @@
+{
+  "name": "inclination",
+  "version": "0.9.0",
+  "description": "A library for working with angles.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelB2020/inclination.git"
+  },
+  "keywords": [
+    "Mathematics",
+    "trigonometry",
+    "math",
+    "angles",
+    "javascript"
+  ],
+  "author": "Samuel Bell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamuelB2020/inclination/issues"
+  },
+  "homepage": "https://github.com/SamuelB2020/inclination#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.8",
+    "jest": "^24.9.0"
+  }
+}
