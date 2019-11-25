@@ -130,5 +130,8 @@ test('Correct Conversion - Radians', () => {
 
   });
 
+  test('fromXY', () => {  
+    expect(new Angle().fromXY(3,3).degrees).toBe(45);
 
+  });
 

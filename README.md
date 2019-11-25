@@ -33,7 +33,7 @@ var angleABC = new Angle("3r");
 Note.
 Exact values with radians can be achieved with the following<br>
 ```javascript
-var exact = Math.PI/2;<br>
+var exact = Math.PI/2;
 var angleABC = new Angle(exact+"r");
 ```
 
@@ -174,3 +174,15 @@ var angleDCA = new Angle("90d")
 console.log(angleBCA.between(angleABC,angleDCA))
 // true
 ```
+
+
+### Angle.fromXY(x,y)
+
+Returns the angle formed by the right triangle with base x and height y
+
+```javascript
+var angleBCA = new Angle().fromXY(3,3)
+console.log(angleBCA.degrees)
+// 45
+```
+

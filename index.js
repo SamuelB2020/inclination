@@ -59,7 +59,7 @@ module.exports = class Angle{
         else if(Normalized > 180 && Normalized < 270){
             return 3;
         }
-        else if(Normalized > 270 && Normalized < 360){
+        else {          
             return 4;
         }
     }
@@ -107,6 +107,13 @@ module.exports = class Angle{
         var normalA = a.Normalize();
         var normalB = b.Normalize();
         return this.degrees >= Math.min(normalA.degrees,normalB.degrees) && this.degrees <=Math.max(normalA.degrees, normalB.degrees);
+    }
+    fromXY(x,y){
+        this.radians = Math.atan(y/x);
+        this.degrees = this.radians*(180/Math.PI);
+        this.turns = this.degrees/360;
+        this.gons = this.degrees*(10/9);
+        return this;
     }
 }
 function stringDef(string){
