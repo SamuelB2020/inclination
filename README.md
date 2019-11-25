@@ -1,6 +1,7 @@
 # inclination
+[![Coverage Status](https://coveralls.io/repos/github/SamuelB2020/inclination/badge.svg?branch=master)](https://coveralls.io/github/SamuelB2020/inclination?branch=master)
+[![Build Status](https://travis-ci.com/SamuelB2020/inclination.svg?branch=master)](https://travis-ci.com/SamuelB2020/inclination) <br>
 A library for working with angles.
-
 ## Usage
 ### Basic Usage <br>
 ```javascript
